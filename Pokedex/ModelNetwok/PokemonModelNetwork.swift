@@ -81,8 +81,8 @@ class PokemonModelNetwork{
     }
     
     //MARK: Functions
-    public func search(){
-        network.search()
+    public func search(offset: Int){
+        network.search(offset: offset)
     }
     
     public func detail(id: Int){

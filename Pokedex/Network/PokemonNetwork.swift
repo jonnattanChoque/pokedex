@@ -9,8 +9,8 @@
 import Foundation
 
 class PokemonNetwork{
-    func search(){
-        ApiRequest.sharedInstance.getData(dec: Pokemons.self, endpoint: "pokemon") { (data) in
+    func search(offset: Int){
+        ApiRequest.sharedInstance.getData(dec: Pokemons.self, endpoint: "pokemon/?limit=50&offset=\(offset)") { (data) in
             let result:[String: Pokemons] = ["result": data as! Pokemons];
             DispatchQueue.main.async {
                 NotificationCenter.default.post(name:Notification.Name(rawValue:Common.Notifications.Pokemon.searchNotificationSuccess),object:nil,userInfo:result)

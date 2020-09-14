@@ -24,7 +24,7 @@ class PokemonTableViewCell: UITableViewCell {
     func display(for pokemon: Pokemon) {
         let id = pokemon.url.split(separator: "/")[5]
         let url = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(id).png"
-        pokemonImg.image = UIImage(url: URL(string: url))
+        pokemonImg.image = UIImage(named: "pokedex") //UIImage(url: URL(string: url))
         nameLbl.text = pokemon.name
     }
 }
