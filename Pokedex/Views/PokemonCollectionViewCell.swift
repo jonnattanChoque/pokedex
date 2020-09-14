@@ -20,7 +20,7 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     func display(for pokemon: PokemonSpecy) {
         let id = pokemon.url.split(separator: "/")[5]
         let url = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(id).png"
-        myImg.image = UIImage(url: URL(string: url))
+        myImg.image = UIImage(named: "pokedex") //UIImage(url: URL(string: url))
         myLbl.text = pokemon.name
         myLbl.font = UIFont(name: "Arial", size: 15)
     }

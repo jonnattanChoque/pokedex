@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		23C07380467CE4EBA8EADF1C /* Pods_PokedexTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A67EBDC991221B1564B632 /* Pods_PokedexTests.framework */; };
 		3C0AAB3D2A509C47A0C45A73 /* Pods_Pokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25F72D689287A4EDDF6D897 /* Pods_Pokedex.framework */; };
+		B28B5979250FCF0600A8BA86 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B5978250FCF0600A8BA86 /* Loading.swift */; };
 		B28C971C250EB22300F07947 /* GenerationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28C971B250EB22300F07947 /* GenerationListViewController.swift */; };
 		B28C971E250EB2DD00F07947 /* GenerationModelNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28C971D250EB2DD00F07947 /* GenerationModelNetwork.swift */; };
 		B28C9720250EB35600F07947 /* GenerationNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28C971F250EB35600F07947 /* GenerationNetwork.swift */; };
@@ -59,6 +60,7 @@
 		600E138137A64448E107399E /* Pods-Pokedex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.debug.xcconfig"; path = "Target Support Files/Pods-Pokedex/Pods-Pokedex.debug.xcconfig"; sourceTree = "<group>"; };
 		72A67EBDC991221B1564B632 /* Pods_PokedexTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokedexTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D914959E58F504F788554BA /* Pods-Pokedex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.release.xcconfig"; path = "Target Support Files/Pods-Pokedex/Pods-Pokedex.release.xcconfig"; sourceTree = "<group>"; };
+		B28B5978250FCF0600A8BA86 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		B28C971B250EB22300F07947 /* GenerationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationListViewController.swift; sourceTree = "<group>"; };
 		B28C971D250EB2DD00F07947 /* GenerationModelNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationModelNetwork.swift; sourceTree = "<group>"; };
 		B28C971F250EB35600F07947 /* GenerationNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationNetwork.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				B2A9C8F7250D640100A4882A /* Common.swift */,
 				B2A9C908250D888000A4882A /* Delegates.swift */,
 				B28C9732250EF21400F07947 /* Helpers.swift */,
+				B28B5978250FCF0600A8BA86 /* Loading.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				B2A9C904250D860B00A4882A /* PokemonNetwork.swift in Sources */,
 				B28C972C250ED59600F07947 /* PokemonCollectionViewCell.swift in Sources */,
 				B2A9C8F5250D638300A4882A /* ApiRequest.swift in Sources */,
+				B28B5979250FCF0600A8BA86 /* Loading.swift in Sources */,
 				B28C971E250EB2DD00F07947 /* GenerationModelNetwork.swift in Sources */,
 				B28C973F250F27B500F07947 /* ItemsModelNetwork.swift in Sources */,
 				B28C9729250EC90D00F07947 /* DetailGenerationViewController.swift in Sources */,

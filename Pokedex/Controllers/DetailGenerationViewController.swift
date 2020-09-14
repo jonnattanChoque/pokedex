@@ -17,9 +17,13 @@ class DetailGenerationViewController: UIViewController, ReloadViewDelegate {
     var myTableView:UITableView?
     var id = 0
     var generationDetail: GenerationDetail? = nil
+    var loader: Loading?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loader = Loading(frame: CGRect(x: (UIScreen.main.bounds.width / 2) - 50, y: 100, width: 100, height: 100), image: UIImage(named: "pokedex")!)
+        view.addSubview(loader!)
         
         createCollection()
         createTable()
@@ -33,6 +37,7 @@ class DetailGenerationViewController: UIViewController, ReloadViewDelegate {
     }
     
     func loadInfo(){
+        loader?.startAnimating()
         GenerationModelNetwork.shared.delegate = self
         GenerationModelNetwork.shared.detail(id: self.id)
     }
@@ -64,6 +69,7 @@ class DetailGenerationViewController: UIViewController, ReloadViewDelegate {
             generationDetail = GenerationModelNetwork.shared.detail
             myCollectionView?.reloadData()
             self.myTableView?.reloadData()
+            loader?.stopAnimating()
         }
     }
     

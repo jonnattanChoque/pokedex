@@ -21,16 +21,20 @@ class DetailPokemonViewController: UIViewController, ReloadViewDelegate {
     var name = ""
     var specie: Specie?
     var pokemon: myPokemon?
+    var loader: Loading?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        loadInfo()
         
+        loader = Loading(frame: CGRect(x: (UIScreen.main.bounds.width / 2) - 50, y: 100, width: 100, height: 100), image: UIImage(named: "pokedex")!)
+        view.addSubview(loader!)
         self.title = name
+        
+        loadInfo()
     }
     
     func loadInfo(){
+        loader?.startAnimating()
         PokemonModelNetwork.shared.delegate = self
         PokemonModelNetwork.shared.detail(id: id)
     }
@@ -56,6 +60,8 @@ class DetailPokemonViewController: UIViewController, ReloadViewDelegate {
             fullString = fullString + formattedString
         }
         typesLbl.text = fullString
+        
+        loader?.stopAnimating()
     }
     
     //MARK: Protocols

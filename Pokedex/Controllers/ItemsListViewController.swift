@@ -75,7 +75,6 @@ extension ItemsListViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "detailPokemonSegue", sender: indexPath)
     }
 }
 
